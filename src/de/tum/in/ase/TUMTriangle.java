@@ -18,7 +18,7 @@ public class TUMTriangle extends Application {
     /**
      * Creates the TUM triangle recursively by adding the generated triangles to the triangles
      * to the triangles attribute in the object.
-     * @param top The offset from the top
+     * @param top The offset from the top (contingency commit necessary)!
      * @param left The offset from the left
      * @param height The height of the triangle
      * @param depth The recursion depth
