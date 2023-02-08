@@ -25,11 +25,35 @@ public class TUMTriangle extends Application {
      */
     public void createTUMTriangle(double top, double left, double height, int depth) {
         // TODO: Task 1: create the TUM triangle
-        if (depth == 0) {
-            triangles.clear();
+        if(depth <= 0) {
+            return;
         }
 
-        if (depth == 1) {
+        double triovar = left + Math.sqrt(3) * height / 4;
+
+
+            Point bp1 = new Point(left, top);
+            Point bp2 = new Point(left, top + height);
+            Point bp3 = new Point(left + Math.sqrt(3) * height/2, top + (height / 2));
+            Triangle blueTrio = new Triangle(bp1, bp2, bp3, PAINT_BLUE);
+            triangles.add(blueTrio);
+
+
+            Point wp1 = new Point(left, top + height / 2);
+            Point wp2 = new Point(triovar, top + height / 4);
+            Point wp3 = new Point(triovar, top + 3 * height / 4);
+            Triangle whiteTrio = new Triangle(wp1, wp2, wp3, PAINT_WHITE);
+            triangles.add(whiteTrio);
+
+            createTUMTriangle(top , left, height / 2 , depth - 1);
+            createTUMTriangle(top + height / 2 , left, height / 2 ,depth - 1);
+            createTUMTriangle(top + height / 4 , triovar, height / 2 ,depth - 1);
+
+
+        //createTUMTriangle(top / 4 , left / 4, height / 2 ,depth - 1);
+        //createTUMTriangle(3 + top / 4 , left / 4, height / 2 ,depth - 1);
+
+        /*if (depth == 1) {
             Point bp1 = new Point(left, top);
             Point bp2 = new Point(left, top + height);
             Point bp3 = new Point(left + Math.sqrt(3) * height/2, top + (height / 2));
@@ -42,8 +66,7 @@ public class TUMTriangle extends Application {
             Point wp3 = new Point(triovar, top + 3 * height / 4);
             Triangle whiteTrio = new Triangle(wp1, wp2, wp3, PAINT_WHITE);
             triangles.add(whiteTrio);
-        }
-
+        }*/
 
     }
 
@@ -58,7 +81,7 @@ public class TUMTriangle extends Application {
         stage.setResizable(false);
         stage.show();
 
-        createTUMTriangle(0, 0, 400, 1);
+        createTUMTriangle(0, 0, 400, 9);
 
         for (Triangle triangle : triangles) {
             simplePad.drawTriangle(triangle);
