@@ -45,9 +45,9 @@ public class TUMTriangle extends Application {
             Triangle whiteTrio = new Triangle(wp1, wp2, wp3, PAINT_WHITE);
             triangles.add(whiteTrio);
 
-            createTUMTriangle(top, left, height / 2 , depth - 1);
-            createTUMTriangle(top + height / 2, left, height / 2 ,depth - 1);
-            createTUMTriangle(top + height / 4, triovar, height / 2 ,depth - 1);
+            createTUMTriangle(top, left, height / 2, depth - 1);
+            createTUMTriangle(top + height / 2, left, height / 2 , depth - 1);
+            createTUMTriangle(top + height / 4, triovar, height / 2 , depth - 1);
 
 
         //createTUMTriangle(top / 4 , left / 4, height / 2 ,depth - 1);
