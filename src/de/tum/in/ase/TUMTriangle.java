@@ -86,5 +86,7 @@ public class TUMTriangle extends Application {
         for (Triangle triangle : triangles) {
             simplePad.drawTriangle(triangle);
         }
+
+        triangles.clear();
     }
 }
