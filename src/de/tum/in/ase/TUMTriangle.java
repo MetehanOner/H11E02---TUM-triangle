@@ -25,7 +25,7 @@ public class TUMTriangle extends Application {
      */
     public void createTUMTriangle(double top, double left, double height, int depth) {
         // TODO: Task 1: create the TUM triangle
-        if(depth <= 0) {
+        if (depth <= 0) {
             return;
         }
 
@@ -34,7 +34,7 @@ public class TUMTriangle extends Application {
 
             Point bp1 = new Point(left, top);
             Point bp2 = new Point(left, top + height);
-            Point bp3 = new Point(left + Math.sqrt(3) * height/2, top + (height / 2));
+            Point bp3 = new Point(left + Math.sqrt(3) * height / 2, top + (height / 2));
             Triangle blueTrio = new Triangle(bp1, bp2, bp3, PAINT_BLUE);
             triangles.add(blueTrio);
 
@@ -45,9 +45,9 @@ public class TUMTriangle extends Application {
             Triangle whiteTrio = new Triangle(wp1, wp2, wp3, PAINT_WHITE);
             triangles.add(whiteTrio);
 
-            createTUMTriangle(top , left, height / 2 , depth - 1);
-            createTUMTriangle(top + height / 2 , left, height / 2 ,depth - 1);
-            createTUMTriangle(top + height / 4 , triovar, height / 2 ,depth - 1);
+            createTUMTriangle(top, left, height / 2 , depth - 1);
+            createTUMTriangle(top + height / 2, left, height / 2 ,depth - 1);
+            createTUMTriangle(top + height / 4, triovar, height / 2 ,depth - 1);
 
 
         //createTUMTriangle(top / 4 , left / 4, height / 2 ,depth - 1);
