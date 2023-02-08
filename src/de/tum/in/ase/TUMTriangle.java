@@ -46,8 +46,8 @@ public class TUMTriangle extends Application {
             triangles.add(whiteTrio);
 
             createTUMTriangle(top, left, height / 2, depth - 1);
-            createTUMTriangle(top + height / 2, left, height / 2 , depth - 1);
-            createTUMTriangle(top + height / 4, triovar, height / 2 , depth - 1);
+            createTUMTriangle(top + height / 2, left, height / 2, depth - 1);
+            createTUMTriangle(top + height / 4, triovar, height / 2, depth - 1);
 
 
         //createTUMTriangle(top / 4 , left / 4, height / 2 ,depth - 1);
